@@ -5,10 +5,13 @@ import {
   BottomTabBar,
 } from "@react-navigation/bottom-tabs";
 
-import { Home } from "../screens";
+import { Home, Transaction } from "../screens";
 import { COLORS, FONTS, icons } from "../constants";
 // import LinearGradient from "react-native-linear-gradient";
 import { LinearGradient } from "expo-linear-gradient";
+import Portfolio from "../screens/Portfolio";
+import Price from "../screens/Price";
+import Settings from "../screens/Settings";
 
 const Tab = createBottomTabNavigator();
 
@@ -83,7 +86,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="Portfolio"
-        component={Home}
+        component={Portfolio}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
@@ -130,7 +133,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="Prices"
-        component={Home}
+        component={Price}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
@@ -155,9 +158,10 @@ const Tabs = () => {
           ),
         }}
       />
+
       <Tab.Screen
         name="Settings"
-        component={Home}
+        component={Settings}
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>

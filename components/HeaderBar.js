@@ -1,16 +1,24 @@
-import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { COLORS, FONTS, icons, images, SIZES } from "../constants";
 
-const HeaderBar = ({ right }) => {
+const HeaderBar = ({ right, label }) => {
   const navigation = useNavigation();
   return (
-    <View style={{ paddingHorizotal: SIZES.padding, flexDirection: "row" }}>
-      <View style={{ flex: 1, alignItems: "flex-start" }}>
+    <View
+      style={{
+        paddingHorizotal: SIZES.padding,
+        flexDirection: "row",
+        marginTop: SIZES.padding,
+      }}
+    >
+      <View
+        style={{ flex: 1, marginLeft: SIZES.base, alignItems: "flex-start" }}
+      >
         <TouchableOpacity
           style={{ flexDirection: "row", alignItems: "center" }}
-          onPress={() => Navigation.goback()}
+          onPress={() => navigation.goBack()}
         >
           <Image
             source={icons.back_arrow}
@@ -21,7 +29,9 @@ const HeaderBar = ({ right }) => {
         </TouchableOpacity>
       </View>
       {right && (
-        <View style={{ flex: 1, alignItems: "flex-end" }}>
+        <View
+          style={{ flex: 1, alignItems: "flex-end", marginRight: SIZES.base }}
+        >
           <TouchableOpacity>
             <Image
               source={icons.star}

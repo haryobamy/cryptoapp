@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { COLORS, FONTS, icons, SIZES } from "../constants";
 
-const PriceAlert = () => {
+const PriceAlert = ({ customContainerStyle }) => {
   return (
     <TouchableOpacity
       style={{
@@ -24,7 +24,7 @@ const PriceAlert = () => {
         paddingVertical: SIZES.padding,
         backgroundColor: COLORS.white,
         borderRadius: SIZES.radius,
-        // ...customContainerStyle,
+        ...customContainerStyle,
         ...styles.shadow,
       }}
     >

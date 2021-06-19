@@ -22,9 +22,9 @@ const Home = ({ navigation }) => {
     dummyData.transactionHistory
   );
 
-  useEffect(() => {
-    LogBox.ignoreLogs(["VirtualizedList should never be nested"]);
-  }, []);
+  // useEffect(() => {
+  //   LogBox.ignoreLogs(["VirtualizedList should never be nested"]);
+  // }, []);
 
   function renderHeader() {
     const renderItem = ({ item, index }) => (
