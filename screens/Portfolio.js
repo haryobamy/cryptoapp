@@ -5,7 +5,7 @@ import { FONTS, SIZES } from "../constants";
 const Portfolio = () => {
   return (
     <View style={{ marginTop: SIZES.padding }}>
-      <Text style={{ ...FONTS.h2 }}>portfoli screen</Text>
+      <Text style={{ ...FONTS.h2 }}>portfoli to be designed screen</Text>
     </View>
   );
 };
